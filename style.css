@@ -1,79 +1,83 @@
-html {
+html, body {
   height: 100%;
-}
-
-body {
-  height: 100%;
-  background-image: linear-gradient(#1989c6, #226666);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .game {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  background-color: #AA3939;
-  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  background: #222831;
+  border-radius: 15px;
+  text-align: center;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-template-rows: 80px 80px 80px 80px;
-  border: 1px solid #550000;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: repeat(4, 90px);
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .grid button {
-  background-color: #cfcfcf;
-  color: #003333;
+  background: linear-gradient(145deg, #f8f9fa, #e0e0e0);
+  color: #222;
   font-size: 24px;
   font-weight: bold;
-  border: 1px solid #550000;
-  outline: none;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.grid button:hover {
+  background: linear-gradient(145deg, #ffecd2, #fcb69f);
+  transform: scale(1.05);
 }
 
 .footer {
-  margin-top: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer button {
-  border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(184, 49, 187, 0.5);
-  padding: 5px;
-  width: 80px;
-  background-color: #D4EE9F;
-  color: #a496b8;
-  outline: none;
+  border-radius: 10px;
+  padding: 8px 15px;
+  background: linear-gradient(135deg, #00ff87, #60efff);
+  color: #222;
+  border: none;
   cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .footer button:hover {
-  color: #D4EE9F;
-  background-color: #003333;
+  background: linear-gradient(135deg, #60efff, #00ff87);
+  transform: scale(1.1);
+  color: #000;
 }
 
 .footer span {
   flex: 1;
   text-align: center;
   font-size: 20px;
-  color: #D4EE9F;
-  font-weight: bold;
-  margin: auto 0;
+  color: #f8f9fa;
+  font-weight: 600;
 }
 
 .message {
-  color:#AA3939;
-  height: 80px;
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff6b6b;
+  height: 40px;
 }
